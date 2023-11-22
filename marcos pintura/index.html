@@ -5,12 +5,12 @@
   <meta charset="utf-8" />
   <title>My page title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <img src="https://lh3.googleusercontent.com/p/AF1QipM32mHsd4Ly5DmUN5TrYPF74T4CiS0odN45PDVh=s180-w180-h510" alt="some text" width="300" height="200" />
+  <img id="perfil" src="https://lh3.googleusercontent.com/p/AF1QipM32mHsd4Ly5DmUN5TrYPF74T4CiS0odN45PDVh=s180-w180-h510" alt="some text" width="300" height="200" />
 
   <header></header>
 
@@ -33,36 +33,87 @@
       <h2>Portfólio de Pinturas</h2>
       <p>Conheça as pinturas residenciais de Marquinhos</p>
     </section>
-          
+    <body>
+      <div id="photo-container"></div>
+  
+      <script type="module">
+          import { foto } from "./foto.js";
+  
+          const photoContainer = document.getElementById('photo-container');
+  
+          function criarCard(photo) {
+              const card = document.createElement('div');
+              card.classList.add('card');
+  
+              const img = document.createElement('img');
+              img.src = `${foto.pasta}/${photo.imagem}`;
+              img.alt = photo.titulo;
+  
+              const title = document.createElement('h2');
+              title.textContent = photo.titulo;
+  
+              const description = document.createElement('p');
+              description.textContent = photo.descricao;
+  
+              card.appendChild(img);
+              card.appendChild(title);
+              card.appendChild(description);
+  
+              card.addEventListener("click", function () {
+                  console.log(`A imagem ${photo.titulo} foi clicada`);
+                  // Add any other functionality when the card is clicked
+              });
+  
+              return card;
+          }
+  
+          function carregarCards() {
+              foto.foto.forEach(photo => {
+                  const card = criarCard(photo);
+                  photoContainer.appendChild(card);
+              });
+          }
+  
+          carregarCards();
+      </script>
+      
     <div style="text-align:center">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <!-- Adicione mais pontos conforme necessário -->
     </div>
-
+     
     <section id="sobre">
       <h2>Sobre</h2>
-    </section>
-
+    </section><div class="sobre"></div>
+    <p>Pinturas em geral com confiança</p>
+    <p>qualidade e seguração</p>
+  </div>
     <section id="contato">
       <h2>Contato</h2>
       <ul>
-        <li><button onclick="whatsapp()">WhatsApp</button></li>
-        <Form label="Email">
-          <Input placeholder="you@example.com" icon="i-heroicons-envelope" />
-        </Form>
-        <li><a target="_blank" href="https://instagram.com/marquinhospinturas10"><button type="instagram">Instagram</button></a></li>
-      </ul>
-      <a href=""></a>
-    </section>
-
-    <footer>
-      <img src="//graph.facebook.com/marquinhospinturass/picture?type=normal" class="img-circle" width="150" height="150" />
+        <div class="bttn"><button onclick="whatsapp()">WhatsApp</button></div>
+                <div class="bttn">  <a target="intagram" href="https://instagram.com/marquinhospinturas10"><button type="instagram">Instagram</button></a></div>
+        
+                
+              </button>
+            </ul>
+            
+          </section>
+          
+          <footer>
+            <div class="subscribe">
+        <p>SUBSCRIBE</p>
+        <input placeholder="Your e-mail" class="subscribe-input" name="" type="email">
+        <br>
+        <div  class="submit-btn"><a href="mailto:cleitono162@gmail.com.br">Enviar e-mail</a></div>
+      </div>
+            
       <p>&copy; 2023 Marquinhos pintura - Pintor em Santa Cruz do Sul</p>
     </footer>
   </main>
-  <script type="module" src="fotos.js"></script>
   
+  <script type="module" src="index.js"></script>
   <script src="script.js"></script>
 
 </body>

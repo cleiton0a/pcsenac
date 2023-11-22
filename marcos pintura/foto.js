@@ -1,25 +1,45 @@
 export const foto = {
-  "pasta": "./fotos",
+  "pasta": "../fotos",
   "foto": [
 {
         "id": 1,
-        "titulo": "Pôr do sol",
-        "descricao": "Lindo pôr do sol na praia",
+        "titulo":"Massa corrida",
+        "descricao": "Santa cruz do  sul",
         "imagem": "1.jpg"
       },
       {
         "id": 2,
-        "titulo": "Montanhas",
-        "descricao": "Vista panorâmica das montanhas",
+        "titulo":"Massa corrida",
+        "descricao": "Santa cruz do  sul",
         "imagem": "2.jpg"
       },
       {
         "id": 3,
-        "titulo": "Floresta",
-        "descricao": "Caminho através da floresta",
+        "titulo":"Massa corrida",
+        "descricao": "Santa cruz do  sul",
         "imagem": "3.jpg"
-      }
+      },
      
+      {
+        "id": 4,
+        "titulo":"Massa corrida",
+        "descricao": "Santa cruz do  sul",
+        "imagem": "4.jpg"
+      },
+     
+      {
+        "id": 5,
+        "titulo":"Massa corrida",
+        "descricao": "Santa cruz do  sul",
+        "imagem": "5.jpg"
+      },
+     
+      {
+        "id": 6,
+        "titulo":"Massa corrida",
+        "descricao": "Santa cruz do  sul",
+        "imagem": "6.jpg"
+      }
     ]
   }
   

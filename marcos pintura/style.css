@@ -1,72 +1,238 @@
-/* style.css */
+footer{
+  padding: auto;
+  margin: auto;
+  text-align: center;
+}
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font: optional;
+  background-origin: padding-box;
+  border: #000;
+  box-shadow: #25D366;
+  text-decoration-color: #000;
+  font-size:large;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #070707; /* Facebook Blue */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the navigation */
+nav {
+  background-color: #030303; /* Facebook Grey */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+nav li {
+  padding: 10px;
+}
+
+/* Style the search form */
+form {
+  display: flex;
+}
+
+form input[type="search"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+form input[type="submit"] {
+  background-color: #4267B2; /* Facebook Blue */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Style the main section */
+main {
+  padding: 20px;
+}
+
+img#perfil{
+  width: auto;
+  height: 100%;
   
-  header {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-  }
+}
+#photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 190px;
+  height: 254px;
+  text-align: center;
+  color:#4267B2;
+  font-size: large;
   
-  nav {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
+  border-radius: 30px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+ 
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style the dots for slideshow */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+/* Style the footer */
+footer {
+  background-color: #f0f2f5; /* Facebook Grey */
+  text-align: center;
+  padding: 10px;
+}
+
+/* Style the WhatsApp button */
+#contato button[onclick="whatsapp"] {
+  background-color: #25D366; /* WhatsApp Green */
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+.subscribe {
+  position: relative;
+  height: 140px;
+  width: 240px;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 4px;
+  color: #333;
+  box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+ 
+}
+
+a{
+  color: #000;
+}
+
+
+
+.subscribe input .a{
+  position: absolute;
+  bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px;
+  width: 82%;
+  background: transparent;
+  transition: all .25s ease;
+  text-align: center;
+  outline: none;
+}
+
+.subscribe input:focus {
+  outline: none;
+  border-bottom: 1px solid #0d095e;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+}
+
+
+
+/* style.css */
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos do cabeçalho */
+header {
+  background-color: #3b5998;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilos da barra de navegação */
+nav {
+  background-color: #3b5998;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Estilos do conteúdo principal */
+main {
+  padding: 20px;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: #f2f2f2;
   
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+}
+
+/* Estilos das imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos dos botões */
+
+
+button:hover {
+  background-color: #2d4373;
+}
+button {
   
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  article {
-    margin-bottom: 20px;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  .mySlides {
-    display: none;
-  }
-  
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px; /* Adiciona um espaçamento entre os botões */
+}
+
+.bttn { /* Estilos específicos para os botões de WhatsApp e Instagram */
+  display: inline-block; 
+  color: #000;
+  padding: left 50px;;
+}
